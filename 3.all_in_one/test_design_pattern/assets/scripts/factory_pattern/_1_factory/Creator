@@ -1,0 +1,7 @@
+export class Creator {
+    public static simpleFactory(product:string) {
+        if(product == 'p1') {
+            return "";
+        }
+    }
+}

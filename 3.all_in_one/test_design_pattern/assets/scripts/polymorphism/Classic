@@ -1,0 +1,6 @@
+import { Polymorphism } from "./Polymorphism"
+export class Classic extends Polymorphism {
+    myMusic(): void {
+        console.log("Play Mozart");
+    }
+}
