@@ -10,6 +10,7 @@ import { LowVolPrintCenter } from './factory_pattern/_1_factory_printjob_/LowVol
 import { FancyPrintCenter } from './factory_pattern/_1_factory_printjob_/FancyPrintCenter';
 import { NewPrintCenter } from './factory_pattern/_1_factory_printjob_/NewPrintCenter';
 import { NewLowVolPrintCenter } from './factory_pattern/_1_factory_printjob_/NewLowVolPrintCenter';
+import { Singleton } from './singleton/_1_singleton/Singleton';
 const { ccclass, property } = _decorator;
 
 @ccclass('MainTest')
@@ -42,6 +43,14 @@ export class MainTest extends Component {
 
         pcNewHighVol.print("LongThesis.doc", NewLowVolPrintCenter.BW);
         pcNewHighVol.print("ShortVita.doc", NewLowVolPrintCenter.COLOR);
+
+        var firstSingleton:Singleton = Singleton.getInstance();
+        firstSingleton.setMsg("Singleton instance: firstSingleton");
+        var secondSingleton:Singleton = Singleton.getInstance();
+        secondSingleton.setMsg("Singleton instance: secondSingleton");
+        console.log(firstSingleton.getMsg());
+        console.log(secondSingleton.getMsg());
+
     }
 
     update(deltaTime: number) {
