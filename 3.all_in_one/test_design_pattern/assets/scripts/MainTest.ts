@@ -11,6 +11,10 @@ import { FancyPrintCenter } from './factory_pattern/_1_factory_printjob_/FancyPr
 import { NewPrintCenter } from './factory_pattern/_1_factory_printjob_/NewPrintCenter';
 import { NewLowVolPrintCenter } from './factory_pattern/_1_factory_printjob_/NewLowVolPrintCenter';
 import { Singleton } from './singleton/_1_singleton/Singleton';
+import { ConcreteComponent } from './decorate/ConcreteComponent';
+import { Componentss } from './decorate/Componentss';
+import { DecConA } from './decorate/DecConA';
+import { DecConB } from './decorate/DecConB';
 const { ccclass, property } = _decorator;
 
 @ccclass('MainTest')
@@ -50,6 +54,13 @@ export class MainTest extends Component {
         secondSingleton.setMsg("Singleton instance: secondSingleton");
         console.log(firstSingleton.getMsg());
         console.log(secondSingleton.getMsg());
+
+
+        var textComponent:Componentss = new ConcreteComponent();
+        textComponent = new DecConA(textComponent);
+        textComponent = new DecConB(textComponent);
+
+        console.log(textComponent.getInformation());
 
     }
 
