@@ -11,16 +11,16 @@ export class PlayVideo extends Component {
         
     }
 
-    public PlayVideo()
-    {
-        var nc = new NetConnection();
-        nc.connect(null);
-        var ns = new NetStream(nc);
-        ns.attachCamera(cc.Camera.main);
-        ns.play("rtmp://192.168.1.100:1935/live/1");
-        addChild(vid);
-        vid.x = 100;
-        vid.y = 50;
-    }
+    // public PlayVideo()
+    // {
+    //     var nc = new NetConnection();
+    //     nc.connect(null);
+    //     var ns = new NetStream(nc);
+    //     ns.attachCamera(cc.Camera.main);
+    //     ns.play("rtmp://192.168.1.100:1935/live/1");
+    //     addChild(vid);
+    //     vid.x = 100;
+    //     vid.y = 50;
+    // }
 }
 
