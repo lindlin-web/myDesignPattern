@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-export class Guitar implements BandFace {
-    start() {
-
-    }
-
-    update(deltaTime: number) {
-        
-    }
-}
-
-=======
 import { BandFace } from "./BandFace";
 
 export class Guitar implements BandFace {
@@ -35,5 +23,4 @@ export class Bongo implements BandFace
         console.log("===========Bongo================",strum);
     }
 }
->>>>>>> 700c536653f32db09bc10859bdb2cfe431523691
 
